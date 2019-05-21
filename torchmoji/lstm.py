@@ -73,6 +73,7 @@ class LSTMHardSigmoid(Module):
             weight.data.uniform_(-stdv, stdv)
 
     def forward(self, input, hx=None):
+        print("input below)
         print(input)
         is_packed = isinstance(input, PackedSequence)
         if is_packed:
